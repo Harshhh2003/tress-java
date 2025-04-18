@@ -1,19 +1,20 @@
-public class preordertraversaltree{
+public class  inordertraverssal{
     public static class node{
-        int data ;
-        node left;
-        node right;
+        int data; node left ; node right;
         node(int data){
             this.data = data;
-
-        } }
-    public static void preordertraversaltree(node root){
-        if(root ==null) return;
-        System.out.println(root.data   +    "     ->  ");
-      preordertraversaltree(root.left);
-      preordertraversaltree(root.right);
-
+        }
     }
+    
+    public static void inordertraversal(
+        node root){
+            if(root == null) return;
+            inordertraversal(root.left);
+            System.out.print(root.data +  "   ");
+            inordertraversal(root.right);
+
+        }
+    
     public static void main(String[] args) {
         node root = new node(10);
         node a = new node(5);
@@ -24,7 +25,7 @@ public class preordertraversaltree{
         node d = new node(7);
         a.left =c;
         a.right = d;
-        preordertraversaltree(root);
+        inordertraversal(root);
         
     }
 }
