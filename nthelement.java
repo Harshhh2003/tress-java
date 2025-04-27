@@ -7,9 +7,7 @@ public class nthelement {
         node(int data) {
             this.data = data;
         }
-    }
-
-    public static void printlevel(node root, int n) {
+    } public static void printlevel(node root, int n) {
         if (root == null) return;
 
         if (n == 1) {
