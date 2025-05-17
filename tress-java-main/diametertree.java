@@ -15,13 +15,10 @@ class TreeNode {
     }
  public static int findHeight(TreeNode node) {
         if (node == null) return 0;
-
-        int left = findHeight(node.left);
+    int left = findHeight(node.left);
         int right = findHeight(node.right);
-
-        max = Math.max(max, left + right);
-
-        return 1 + Math.max(left, right);
+    max = Math.max(max, left + right);
+  return 1 + Math.max(left, right);
     }
 
     public static void main(String[] args) {
